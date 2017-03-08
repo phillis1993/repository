@@ -7,16 +7,21 @@
  */
 
 require ('./lib/func.php');
+
+
 if(empty($_POST)){
+    //无数据提交，显示页面
     $sql = 'select * from cat';
     $cats = query($sql);
     require('./view/admin/artadd.html');
 }else{
+
+    //获取文章内容并存入数据库
     $art['title'] = trim($_POST['title']);
     $art['cat_id'] = $_POST['cat_id'];
     $art['content'] = $_POST['content'];
     $art['pubtime'] = date("Y-m-d H:i", time());
-    echo $art['content'];
+//    echo $art['content'];
 
 
     $sql = "insert into art(title,cat_id,content,pubtime) values ('$art[title]','$art[cat_id]','$art[content]','$art[pubtime]')";
