@@ -1,0 +1,94 @@
+.form-group {
+    box-sizing: border-box;
+    margin:10px 0;
+    padding: 10px 0;
+}
+
+.form-group::after {
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.form-group label{
+    font: 18px '微软雅黑','黑体',sans-serif;
+    font-weight: bold;
+    color: #ce0000;
+
+}
+
+
+.form-group [type=text]{
+    width: 400px;
+    height: 30px;
+    font-weight: bold;
+    font: 17px '微软雅黑','黑体',sans-serif;
+    padding:0 10px;
+}
+
+
+.form-group [type=submit]{
+    width: 200px;
+    height: 30px;
+    font-weight: bold;
+    font: 17px '微软雅黑','黑体',sans-serif;
+    text-align: center;
+}
+
+textarea {
+    width: 400px;
+    height: 80px;
+    font: 17px '微软雅黑','黑体',sans-serif;
+    padding: 10px;
+}
+
+select {
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    font: 17px '微软雅黑','黑体',sans-serif;
+    text-align: center;
+}
+
+.title {
+    width: 100px;
+    height: 40px;
+    font: 19px '微软雅黑','黑体',sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+
+.num {
+    box-sizing: border-box;
+    width: 100px;
+    height: 30px;
+    font: 17px '微软雅黑','黑体',sans-serif;
+    text-align: center;
+    padding: 5px 10px;
+    color: #004b97;
+}
+
+.value {
+    box-sizing: border-box;
+    width: 100px;
+    height: 30px;
+    padding: 5px 10px;
+    font: 17px '微软雅黑','黑体',sans-serif;
+    text-align: center;
+    color: #e2efee;
+}
+
+.value a:hover, .value a:visited{
+    color: #ffd306;
+}
+
+
+.mes {
+    width: 400px;
+    height: 80px;
+    font: 30px '微软雅黑','黑体',sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px;
+    color: #ffd306;
+}

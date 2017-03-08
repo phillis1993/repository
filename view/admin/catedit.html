@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/adm.css">
+</head>
+<body>
+<header>
+    <h1>myblog</h1>
+    <h5>tryAgain^_^</h5>
+</header>
+<div id="main">
+    <div id="lside">
+        <h3>admin</h3>
+        <ul>
+            <li><a href="./catlist.php">栏目列表</a></li>
+            <li><a href="./catadd.php">添加栏目</a></li>
+            <li><a href="./artlist.php">文章列表</a></li>
+            <li><a href="./artadd.php">发布文章</a></li>
+        </ul>
+    </div>
+    <div id="rside">
+        <form action="./catedit.php" method="post">
+            <div class="form-group">
+                <label>栏目名称:</label>
+                <p>
+                    <input type="text" name="catname" value="<?php echo $cat['catname'];?>">
+                </p>
+            </div>
+            <div class="form-group">
+                <input type="hidden" name="cat_id" value="<?php echo $cat_id;?>">
+                <p>
+                    <input type="submit" value="submit"/>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+<footer>
+    <p>GX_tryAgain!</p>
+</footer>
+</body>
+</html>

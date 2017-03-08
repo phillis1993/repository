@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+<!--    <link rel="stylesheet" href="./css/art.css">
+    <link rel="stylesheet" href="./css/adm.css">-->
+</head>
+<body>
+<header>
+    <h1>myblog</h1>
+    <h5>tryAgain^_^</h5>
+</header>
+<div id="main">
+    <div id="lside">
+        <h3>category</h3>
+        <ul>
+            <?php foreach($cats as $c){?>
+            <li>
+                <a href="./index.php?cat_id=<?php echo $c[cat_id];?>"><?php echo $c['catname'];?></a>
+            </li>
+            <?php }?>
+        </ul>
+    </div>
+    <div id="rside">
+        <?php foreach($arts as $a){?>
+        <article>
+            <h2><a href="./art.php?art_id=<?php echo $a[art_id];?>"><?php echo $a['title'];?></a></h2>
+            <div class="index_header">
+                <time><?php echo $a['pubtime'];?></time>
+                <a href="./index.php?cat_id=<?php echo $a[cat_id];?>"><?php echo $a['catname'];?></a>
+            </div>
+            <div class="index_content">
+                <?php echo $a['content'];?>
+            </div>
+        </article>
+        <?php }?>
+    </div>
+</div>
+<footer>
+    <p>GX_tryAgain!</p>
+</footer>
+</body>
+</html>

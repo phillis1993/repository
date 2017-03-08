@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/adm.css">
+</head>
+<body>
+<header>
+    <h1>myblog</h1>
+    <h5>tryAgain^_^</h5>
+</header>
+<div id="main">
+    <div id="lside">
+        <h3>admin</h3>
+        <ul>
+            <li><a href="./catlist.php">栏目列表</a></li>
+            <li><a href="./catadd.php">添加栏目</a></li>
+            <li><a href="./artlist.php">文章列表</a></li>
+            <li><a href="./artadd.php">发布文章</a></li>
+        </ul>
+    </div>
+    <div id="rside">
+        <table>
+            <tr>
+                <td class="title">序号</td>
+                <td class="title">栏目名称</td>
+                <td class="title">num</td>
+                <td class="title">edit</td>
+                <td class="title">delete</td>
+            </tr>
+            <?php $i=1;
+            foreach($cats as $c){?>
+            <tr>
+                <td class="num"><?php echo $i++;?></td>
+                <td class="value"><?php echo $c['catname'];?></td>
+                <td class="value"><span class="badge"><?php echo $c['num'];?></span></td>
+                <td class="value"><a href="./catedit.php?cat_id=<?php echo $c['cat_id'];?>"/>edit</td>
+                <td class="value"><a href="./catdel.php?cat_id=<?php echo $c['cat_id'];?>"/>delete</td>
+            </tr>
+            <?php }?>
+        </table>
+    </div>
+</div>
+<footer>
+    <p>GX_tryAgain!</p>
+</footer>
+
+</body>
+</html>
